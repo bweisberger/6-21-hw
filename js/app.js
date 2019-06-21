@@ -51,23 +51,23 @@ console.log(greeting);
 //
 // C. Booleans
 // Using the provided variable definitions, replace the blanks so that all log statements print true in the console. Answers should be all be valid JS syntax and not weird things that don't make sense but happen to print true to the console.
-//   const a = 4;
-//   const b = 53;
-//   const c = 57;
-//   const d = 16;
-//   const e = 'Kevin';
+  const a = 4;
+  const b = 53;
+  const c = 57;
+  const d = 16;
+  const e = 'Kevin';
 //
-//   console.log(a __ b);
-//   console.log(c __ d);
-//   console.log('Name' __ 'Name');
-//   // FOR THE NEXT TWO, USE ONLY && OR ||
-//   console.log(true __ false);
-//   console.log(false __ false __ false __ false __ false __ true);
-//   console.log(false __ false)
-//   console.log(e ___ 'Kevin');
-//   console.log(a __ b ___ c); // note: a < b < c is NOT CORRECT (and is not a valid JS expression)
-//   console.log(a __ a ___ d); // note: the answer is a simple arithmetic equation, not something "weird"
-//   console.log(48 __ '48');
+  console.log(a < b);
+  console.log(c > d);
+  console.log('Name' === 'Name');
+  // FOR THE NEXT TWO, USE ONLY && OR ||
+  console.log(true || false);
+  console.log(false || false || false || false || false || true);
+  console.log(false === false)
+  console.log(e === 'Kevin');
+  console.log(a + b === c); // note: a < b < c is NOT CORRECT (and is not a valid JS expression)
+  console.log(a * a === d); // note: the answer is a simple arithmetic equation, not something "weird"
+  console.log(48 == '48');
 // 🔴 Commit.
 //
 // D. The farm
