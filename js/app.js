@@ -180,6 +180,7 @@ for (let i = 0; i <= 100; i++) {
 //
 // B. Easy Does It
 // Create an array that contains three quotes and store it in a variable called quotes.
+const quotes = ["You're an animal, Rock", "If he dies, he dies.", "Ding ding"]
 // 🔴 Commit.
 //
 // C. Accessing elements
