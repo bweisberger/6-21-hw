@@ -235,11 +235,13 @@ console.log(myArray.reverse());
 //
 // F. Biggie Smalls
 // Create a variable that contains an integer.
-//
+const int = 6;
 // Write an if ... else statement that:
 //
 // console.log()s "little number" if the number is entered is less than 100
-//
+if (int < 100) {
+  console.log('little number');
+} else { console.log('big number'); }
 // console.log()s big number if the number is greater than or equal to 100.
 //
 // 🔴 Commit.
