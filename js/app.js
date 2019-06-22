@@ -393,8 +393,17 @@ console.log(getMultipleLengths(["hello", "what", "is", "up", "dude"]));
 //
 // G. maxOfThree
 // Define a function maxOfThree that takes three numbers as arguments and returns the largest of them. If all numbers are the same, it doesn't matter which one is returned. If the two largest numbers are the same, one of them should be returned. Be sure to test it with larger values in each of the three locations.
-//
-// console.log(maxOfThree(6, 9, 1));
+const maxOfThree = function(num1, num2, num3) {
+  const numArr = [num1, num2, num3];
+  let maxNum = 0;
+  for (let i = 0; i < numArr.length; i++) {
+    if (numArr[i] > maxNum) {
+      maxNum = numArr[i];
+    }
+  }
+  return maxNum;
+}
+console.log(maxOfThree(19, 9, 21));
 // => 9
 //
 // Did you use Google and find Math.max()? If so, great job! Very resourceful—keep looking stuff up! However, for this particular question, we need you to submit a solution that does not use Math.max().
