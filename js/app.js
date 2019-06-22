@@ -379,8 +379,14 @@ console.log(getTwoLengths("Hank", "Hippopopalous"));
 //
 // F. getMultipleLengths
 // Write a function getMultipleLengths that accepts a single parameter as an argument: an array of strings. The function should return an array of numbers where each number is the length of the corresponding string.
-//
-// console.log(getMultipleLengths(["hello", "what", "is", "up", "dude"]));
+const getMultipleLengths = function(arr) {
+  const lengthArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    lengthArray.push(arr[i].length);
+  }
+  return lengthArray;
+}
+console.log(getMultipleLengths(["hello", "what", "is", "up", "dude"]));
 // => [5, 4, 2, 2, 4]
 //
 // 🔴 Commit.
