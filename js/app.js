@@ -543,6 +543,7 @@ console.log(getRandomElement(rockyQuotes));
 // Create an object called user.
 const user = {
   name: "Johnny",
+  email: "JB@email.com",
   age: 12,
   purchased: []
 }
@@ -552,11 +553,13 @@ const user = {
 // B. Update the user
 // Our user has changed his or her email address. Without changing the original user object, update the email value to a new email address.
 // Our user has had a birthday! Without changing the original user object, increment the age value using the postfix operator. Hint: age++
+console.log(user["email"] = "JohnJohn@email.com");
+console.log(user["age"] = 13);
 // 🔴 Commit.
 //
 // C. Adding keys and values
 // You have decided to add your user's location to the data that you want to collect.
-//
+console.log(user["location"] = "Panama");
 // Without changing the original user object, add a new key location to the object, and give it a value or some-or-other location (a string).
 // 🔴 Commit.
 //
@@ -564,6 +567,8 @@ const user = {
 // Our user has purchased an item! They have purchased some "carbohydrates". Using .push(), add the string "carbohydrates" to the purchased array.
 // Our user has purchased an item! They have purchased some "peace of mind". Using .push(), add the string "peace of mind" to the purchased array.
 // Our user has purchased an item! They have purchased some "Merino jodhpurs". Using .push(), add the string "Merino jodhpurs" to the purchased array.
+user.purchased.push("carbohydrates", "peace of mind", "Merino jodhpurs");
+console.log(user.purchased[2]);
 // Console.log just the "Merino jodhpurs" from the purchased array.
 // 🔴 Commit.
 //
@@ -579,11 +584,22 @@ const user = {
 // When we console.log user, we would see the friend object added to our user object.
 //
 // Write a friend object into your user object and give the friend a name, age, location, and purchased array (empty for now)
+user.friend = {
+  name: "James",
+  age: 12,
+  location: "Pomona",
+  purchased: []
+}
 // Console.log just the friend's name
+console.log(user.friend.name);
 // Console.log just the friend's location
+console.log(user.friend.location);
 // CHANGE the friend's age to 55
+console.log(user.friend.age = 55);
 // The friend has purchased "The One Ring". Use .push() to add "The One Ring" to the friend's purchased array.
 // The friend has purchased "A latte". Use .push() to add "A latte" to the friend's purchased array.
+user.friend.purchased.push("The One Ring", "A latte");
+console.log(user.friend.purchased[1]);
 // Console.log just "A latte" from the friend's purchased array.
 // 🔴 Commit.
 //
