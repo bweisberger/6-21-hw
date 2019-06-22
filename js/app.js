@@ -504,10 +504,36 @@ console.log(reverseWordOrder("I use Lâncome on my comb"));
 //
 // K. Get down and dirty with Math.random()
 // Write a function that will return a random integer between 1 and 10. Test it.
+const getRandomInt = function(num1=1, num2=10) {
+  let randomInt = Math.floor(Math.random()*num2);
+  if (randomInt < num1) {
+    randomInt += num1;
+  }
+  return randomInt;
+}
+
+// console.log(getRandomInt());
 // Write a function that will return a random integer between 10 and 100. Test it.
+console.log(getRandomInt(10,100));
 // Write a function that will return a random number between 532 and 13267. Test it.
+const getRandomNum = function(num1=1, num2=10) {
+  let randomNum = (Math.random()*num2)+0.01*num2;
+  if(randomNum < num1) {
+    randomNum += num1;
+  }
+  return randomNum;
+}
+
+console.log(getRandomNum(532,13267));
 // Write a function that will return a random number between 1 and 10. Test it.
+console.log(getRandomNum());
 // Add a few more quotes to the quotes array from question III-B-1 above. Write a function that will take an array as a parameter, and return a random element from that array. Call your function a few times, passing in the quotes array. Give it a nice semantic name like getRandomElement.
+const rockyQuotes = ["You're an animal, Rock", "If he dies, he dies.", "Ding ding", "Adriaaaaaan", "Cut me, Mick!", "Nothing's over, just give me something to drink!"]
+const getRandomElement = function(array) {
+  const randomElement = array[getRandomInt(0, array.length)];
+  return randomElement;
+}
+console.log(getRandomElement(rockyQuotes));
 // 🔴 Commit.
 //
 // Objects
