@@ -554,7 +554,7 @@ const user = {
 // Our user has changed his or her email address. Without changing the original user object, update the email value to a new email address.
 // Our user has had a birthday! Without changing the original user object, increment the age value using the postfix operator. Hint: age++
 console.log(user["email"] = "JohnJohn@email.com");
-console.log(user["age"] = 13);
+console.log(++user.age);
 // 🔴 Commit.
 //
 // C. Adding keys and values
@@ -619,8 +619,16 @@ for (let i = 0; i < user.friend.purchased.length; i++) {
 // it should increment the user's age by 1
 // make the user's name uppercase
 // The function does not need a return statement, it will merely modify the user object.
-//
+const updateUser = function() {
+  user.age++;
+  user.name.toUpperCase();
+}
 // Write a function oldAndLoud that performs the exact same tasks as updateUser, but instead of hard-coding it to only work on our user object, make it take a parameter person, and have it modify the object that is passed in as an argument when the function is called. Call your oldAndLoud function with user as the argument.
+const oldAndLoud = function(person) {
+  console.log(person.age++);
+  console.log(person.name.toUpperCase());
+}
+oldAndLoud(user);
 // 🔴 Commit.
 //
 //
