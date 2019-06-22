@@ -412,27 +412,79 @@ console.log(maxOfThree(19, 9, 21));
 //
 // H. printLongestWord
 // Write a function printLongestWord that accepts a single argument, an array of strings. The method should return the longest word in the array. In case of a tie, the method should return the word that appears first in the array.
-//
-// console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "Todd"]));
+const printLongestWord = function(arr) {
+  let longestWord = "";
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].length > longestWord.length) {
+      longestWord = arr[i];
+    }
+  }
+  return longestWord;
+}
+console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "Todd"]));
 // => "Peanutbutter"
 //
 // 🔴 Commit.
 //
 // I. transmogrify
 // Write a Javascript function called transmogrify. This function should accept three arguments, which you can assume will be numbers. Your function should return the "transmogrified" result.
-//
+const transmogrify = function(num1, num2, num3) {
+  return ((num1*num2)**num3);
+}
 // The transmogrified result of three numbers is the product of the first two numbers, raised to the power of the third number.
 //
 // For example, the transmogrified result of 5, 3, and 2 is (5 times 3) to the power of 2 is 225.
 //
-// console.log(transmogrify(5, 3, 2));
+console.log(transmogrify(5, 3, 2));
 // => 225
 //
 // 🔴 Commit.
 //
 // J. reverseWordOrder v2
 // Without using .split(), .reverse(), or .join(), write a function reverseWordOrder that accepts a single argument, a string. The function should return a string with the order of the words reversed. Don't worry about punctuation.
-//
+const reverseWordOrder = function(string) {
+  //create a word holder, a spaceIndex holder, and a wordsArray
+  let word = "";
+  let spaceIndex = 0;
+  const wordsArray = [];
+  let newString = "";
+  // console.log(string.length, "<-----string length");
+  //loop through string looking for a space
+  for (let i = spaceIndex; i < string.length; i++) {
+    //add letters to word holder one at a timeout
+    //if there's a space OR you reach the end, everything before it is a word.
+    // console.log(i, "<-----i before if check");
+    word += string[i]
+    // console.log(word, "<-----word");
+    if (string[i] === " " || i === string.length - 1) {
+      //add word to wordsArray
+      // console.log("hit a space or the end");
+      wordsArray.push(word);
+      // console.log(wordsArray, "<----wordsArray in loop");
+      //reset word holder after adding it to array
+      word = "";
+      //keep track of index when space is found - use spaceIndex
+      spaceIndex = i+1;
+      // console.log(spaceIndex, "<-----spaceIndex");
+    }
+  }
+  for (let i = wordsArray.length - 1; i >= 0; i--) {
+    if (i === wordsArray.length - 1) {
+      newString += (wordsArray[i] + " ");
+      console.log(newString, "<-----first word");
+    } else if (i === 0){
+      newString += (wordsArray[i].slice(0,-1));
+      console.log(wordsArray[i], "<------first wordsArray element");
+      console.log(wordsArray[i].slice(0,-1), "<-----wordsArray[i].slice(0,-1)");
+      console.log(newString, "<-----last word");
+    } else {
+      newString += wordsArray[i]
+      console.log(newString, "<------middle word")
+    }
+  }
+  return newString;
+
+}
 // See if you can do it without googling.
 //
 // Remember: You can index directly into a string:
@@ -442,10 +494,10 @@ console.log(maxOfThree(19, 9, 21));
 //
 // That and basic loops and variables and arrays are all you need to solve this without the Array methods.
 //
-// console.log(reverseWordOrder("Ishmael me Call"));
+console.log(reverseWordOrder("Ishmael me Call"));
 // => "Call me Ishmael"
 //
-// console.log(reverseWordOrder("I use Lâncome on my comb"));
+console.log(reverseWordOrder("I use Lâncome on my comb"));
 // => "comb my on Lâncome use I"
 //
 // 🔴 Commit.
