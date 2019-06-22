@@ -541,6 +541,11 @@ console.log(getRandomElement(rockyQuotes));
 //
 // A. Make a user object
 // Create an object called user.
+const user = {
+  name: "Johnny",
+  age: 12,
+  purchased: []
+}
 // Write in to the object the key-value pairs for name, email, age, and purchased. Set the value of purchased to an empty array []. Set the other values to whatever you would like.
 // 🔴 Commit.
 //
