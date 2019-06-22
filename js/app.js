@@ -605,7 +605,13 @@ console.log(user.friend.purchased[1]);
 //
 // F. Loops
 // Write a for loop that iterates over the User's purchased array (NOT the friend's purchased array), and prints each element to the console.
+for (let i = 0; i < user.purchased.length; i++) {
+  console.log(user.purchased[i]);
+}
 // Write a for loop that iterates over the Friend's purchased array, and prints each element to the console.
+for (let i = 0; i < user.friend.purchased.length; i++) {
+  console.log(user.friend.purchased[i]);
+}
 // 🔴 Commit.
 //
 // G. Functions can operate on objects
