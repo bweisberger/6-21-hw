@@ -320,7 +320,7 @@ console.log(thomsCloset);
 //
 // Like so?
 //
-console.log(printGreeting("Slimer"));
+// console.log(printGreeting("Slimer"));
 // => Hello there, Slimer!
 //
 // You think you could? I think so too. Feel free to skip this problem, because you've already done it. If you've done the problem twice, read entire problems carefully before doing them from now on.
@@ -339,16 +339,27 @@ console.log(printCool("Captain Reynolds"));
 //
 // C. calculateCube
 // Write a function calculateCube that takes a single number and prints the volume of a cube made from that number.
-//
-// console.log(calculateCube(5));
+const calculateCube = (num) => {
+  console.log(num*num*num);
+  //also possible, num**3
+}
+console.log(calculateCube(5));
 // => 125
 //
 // 🔴 Commit.
 //
 // D. isVowel
 // Write a function isVowel that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise. The vowel could be upper or lower case. Test your function on every vowel and make sure it's working. In general, when you write functions, take a minute to test them with different values to make sure they behave the way you want.
-//
-// console.log(isVowel("a"));
+const isVowel = function(char) {
+  const vowels = ["a","e","i","o","u"]
+  for (let i = 0; i < vowels.length; i++) {
+    if (char.toLowerCase() === vowels[i]) {
+      return true;
+    }
+  }
+  return false;
+}
+console.log(isVowel("a"));
 // => true
 //
 // 🔴 Commit.
